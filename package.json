@@ -1,19 +1,42 @@
 {
-  "name": "mcp-starter",
-  "version": "0.1.0",
-  "private": true,
+  "name": "jambonz-mcp",
+  "version": "1.0.0",
   "type": "module",
+  "description": "MCP server for Jambonz documentation intelligence and REST API control.",
+  "bin": {
+    "jambonz-mcp": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "tsx src/index.ts",
     "build": "tsup src/index.ts --format esm --dts",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "protocol:sync": "tsx tools/sync-protocol-docs.ts",
+    "jambonz:sync": "tsx tools/sync-jambonz-docs.ts",
+    "rest:catalog:generate": "tsx tools/generate-rest-catalog.ts",
+    "rest:catalog:check": "tsx tools/generate-rest-catalog.ts --check",
     "inspect": "npx -y @modelcontextprotocol/inspector npx -y tsx src/index.ts",
     "inspect:help": "npx -y @modelcontextprotocol/inspector --help"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.1",
+    "yaml": "^2.8.1",
     "zod": "^4.1.12"
   },
   "devDependencies": {

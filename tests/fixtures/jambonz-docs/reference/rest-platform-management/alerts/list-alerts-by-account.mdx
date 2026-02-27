@@ -1,0 +1,44 @@
+# list alerts by account
+
+GET https://api.jambonz.cloud/v1/Accounts/{AccountSid}/Alerts
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.1.1
+info:
+  title: list alerts by account
+  version: endpoint_alerts.listAlertsByAccount
+paths:
+  /Accounts/{AccountSid}/Alerts:
+    get:
+      operationId: list-alerts-by-account
+      summary: list alerts by account
+      parameters:
+        - name: AccountSid
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: severity
+          in: query
+          required: false
+          schema:
+            type: string
+            enum:
+              - critical
+              - warning
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ok
+```

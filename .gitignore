@@ -30,5 +30,8 @@ tmp/
 *.tmp
 .eslintcache
 
+# Generated local docs
+docs/jambonz/
+
 # IDE Files
 .idea/

@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "mcp-starter",
+      "name": "jambonz-mcp",
       "dependencies": {
         "@modelcontextprotocol/sdk": "^1.18.1",
         "zod": "^4.1.12",

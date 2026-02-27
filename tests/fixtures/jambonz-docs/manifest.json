@@ -1,0 +1,28 @@
+{
+  "records": [
+    {
+      "sourceUrl": "https://docs.jambonz.org/guides/get-started/developer-quickstart.mdx",
+      "localPath": "guides/get-started/developer-quickstart.mdx",
+      "sha256": "x",
+      "downloadedAt": "2026-02-27T00:00:00.000Z"
+    },
+    {
+      "sourceUrl": "https://docs.jambonz.org/reference/rest-platform-management/users/create-user.mdx",
+      "localPath": "reference/rest-platform-management/users/create-user.mdx",
+      "sha256": "y",
+      "downloadedAt": "2026-02-27T00:00:00.000Z"
+    },
+    {
+      "sourceUrl": "https://docs.jambonz.org/reference/rest-platform-management/alerts/list-alerts-by-account.mdx",
+      "localPath": "reference/rest-platform-management/alerts/list-alerts-by-account.mdx",
+      "sha256": "z",
+      "downloadedAt": "2026-02-27T00:00:00.000Z"
+    },
+    {
+      "sourceUrl": "https://docs.jambonz.org/reference/rest-platform-management/accounts/get-webhook-secret.mdx",
+      "localPath": "reference/rest-platform-management/accounts/get-webhook-secret.mdx",
+      "sha256": "w",
+      "downloadedAt": "2026-02-27T00:00:00.000Z"
+    }
+  ]
+}

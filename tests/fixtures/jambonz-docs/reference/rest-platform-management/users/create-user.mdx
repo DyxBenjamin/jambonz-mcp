@@ -1,0 +1,47 @@
+# create user
+
+POST https://api.jambonz.cloud/v1/Accounts/{AccountSid}/Users
+
+## OpenAPI Specification
+
+```yaml
+openapi: 3.1.1
+info:
+  title: create user
+  version: endpoint_users.createUser
+paths:
+  /Accounts/{AccountSid}/Users:
+    post:
+      operationId: create-user
+      summary: create user
+      parameters:
+        - name: AccountSid
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                is_active:
+                  type: boolean
+              required:
+                - name
+                - email
+      responses:
+        '201':
+          description: created
+```

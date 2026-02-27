@@ -8,12 +8,12 @@ export interface ConnectableServer {
 }
 
 export interface StartServerDependencies {
-  readonly createServer?: () => ConnectableServer;
+  readonly createServer?: () => ConnectableServer | Promise<ConnectableServer>;
   readonly createTransport?: () => StdioServerTransport;
 }
 
 export async function startServer(dependencies: StartServerDependencies = {}): Promise<void> {
-  const server = dependencies.createServer?.() ?? createMcpServer();
+  const server = dependencies.createServer ? await dependencies.createServer() : await createMcpServer();
   const transport = dependencies.createTransport?.() ?? new StdioServerTransport();
   await server.connect(transport);
 }
