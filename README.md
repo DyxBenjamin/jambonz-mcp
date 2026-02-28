@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server for Jambonz documentation intelligence and REST API control. This package exposes Jambonz API reference as one MCP tool per REST endpoint and provides local documentation lookup for schemas, docs, and operational guidance.
 
+> Disclaimer: This is an independent community package. It is not an official Jambonz package and is not developed, maintained, or supported by the Jambonz team.
+
 ### jambonz-mcp vs direct REST usage
 
 This package provides an MCP interface into Jambonz. If you are wiring Jambonz into an agentic environment, this gives you structured tool discovery, endpoint-level schemas, permission gating, and reusable documentation context.
