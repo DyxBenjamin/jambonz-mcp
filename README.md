@@ -81,7 +81,7 @@ Example `~/.codex/config.toml` entry:
 [mcp_servers.jambonz]
 command = "npx"
 args = ["-y", "tsx", "src/index.ts"]
-cwd = "/Users/qrsof/Documents/benjamin/devclusters/workspaces/@dyxbenjamin/MCPs/jambonz-mcp"
+cwd = "/path/to/jambonz-mcp"
 startup_timeout_sec = 20
 tool_timeout_sec = 120
 enabled = true
