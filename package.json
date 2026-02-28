@@ -1,8 +1,16 @@
 {
   "name": "jambonz-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "MCP server for Jambonz documentation intelligence and REST API control.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DyxBenjamin/jambonz-mcp"
+  },
+  "homepage": "https://github.com/DyxBenjamin/jambonz-mcp",
+  "bugs": {
+    "url": "https://github.com/DyxBenjamin/jambonz-mcp/issues"
+  },
   "bin": {
     "jambonz-mcp": "./dist/index.js"
   },
