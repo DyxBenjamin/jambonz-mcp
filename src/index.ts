@@ -17,6 +17,9 @@ export interface StartServerDependencies {
 export async function startServer(dependencies: StartServerDependencies = {}): Promise<void> {
   const server = dependencies.createServer ? await dependencies.createServer() : await createMcpServer();
   const transport = dependencies.createTransport?.() ?? new StdioServerTransport();
+  if (!dependencies.createTransport) {
+    process.stdin.resume();
+  }
   await server.connect(transport);
 }
 
