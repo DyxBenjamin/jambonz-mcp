@@ -1,6 +1,6 @@
 {
   "name": "jambonz-mcp",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "type": "module",
   "description": "MCP server for Jambonz documentation intelligence and REST API control.",
   "repository": {
